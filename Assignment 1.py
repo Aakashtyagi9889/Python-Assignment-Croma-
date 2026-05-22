@@ -99,3 +99,33 @@
             print(FinalSalary)
 
 """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = 21
+b = 56
+c
+print(a & b)
+
+
+
+
+
+
+
+
+
+
+
