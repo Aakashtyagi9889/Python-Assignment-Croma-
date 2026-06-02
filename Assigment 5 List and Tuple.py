@@ -106,7 +106,18 @@ Intermediate Level
 
 
 13. Write a Python program to find the second largest number in a list. 
+    li = [21,22,3,44,45,5,78, 78] 
 
+    largest  = 0
+    secondlargest = 0
+    for a in li:
+        if a > largest :
+            secondlargest = largest
+            largest = a
+        elif a > secondlargest and a != largest:
+            secondlargest = a
+
+    print(secondlargest)
 
 14. Write a program to flatten a nested list. 
 
@@ -116,23 +127,10 @@ Intermediate Level
  
 16. Write a program to replace all negative numbers with zero in a list. 
 
-here some line has added 
+
 """
 
-        
 
-
-
-li = [1, 2, 3, 4, 5]
-num = 2
-result = 1
-for a in li:
-    if a > result:
-        result = a
-    pass
-    if a < result:
-            result = a
-print(result)
 
         
 

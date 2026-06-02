@@ -1,1 +1,0 @@
-])  # Output: 'igayt hsakaa' (entire string reversed)
