@@ -107,7 +107,6 @@ Intermediate Level
 
 13. Write a Python program to find the second largest number in a list. 
     li = [21,22,3,44,45,5,78, 78] 
-
     largest  = 0
     secondlargest = 0
     for a in li:
@@ -116,28 +115,123 @@ Intermediate Level
             largest = a
         elif a > secondlargest and a != largest:
             secondlargest = a
-
     print(secondlargest)
 
 14. Write a program to flatten a nested list. 
-
+    li = [1,2,[3,4],5,6]
+    result = []
+    for a in li :   
+        if type(a)== list:
+                for item in a: 
+                result.append(item)
+        else:
+            result.append(a)
+    print(result)
 
 15. Write a program to count frequency of each element in a list.
-
+    li = [1,2,3,4,14,5,3,15,5,2]
+    visited = []
+    for item in li:
+        if item not in visited:
+            visited.append(item)
+            print(item, " : ",  li.count(item))
  
 16. Write a program to replace all negative numbers with zero in a list. 
+    li = [1,2,-3,-7 ,4]
+    for i in range(len(li)):
+        if li[i] < 0:
+            li[i] = 0
+    print(li)
+
+            OR
+            
+    li = [1,2,-3,-7 ,4]
+    result = []
+    for i in range(0 , len(li)):
+        if li[i] < 0:
+            result.append(0)
+        else:
+            result.append(li[i])
+    print(result)
+
+            OR
+
+    li = [1,2,-3,-7 ,4]
+    result = []
+    for i in li :
+        if i < 0:
+            result.append(0)
+        else:
+            result.append(i)
+    print(result)
+====================================================================================================================
+Advanced Level 
+17. Write a program to remove all occurrences of a given element from a list. 
+    li = [1,2,3,4, 5 ,2 ,2]     # This method is not suitable because of indexing ( list is mutabble )
+    x  = 2
+    for a in li : 
+        if a == x:
+            li.remove(a)
+    print(li)
+
+ANSWER  li = [1,2,3,4, 5 ,2 ,2]
+        result = []
+        x =  2
+        for a in li:
+            if a != x:
+                result.append(a)
+        print(result )
 
 
-"""
+18. Write a program to check if a list is a palindrome. 
+    li  = [1,2,1,2]
+    if li == li[::-1]:
+        print("Palindrome")
+    else:
+        print("Not Palindrome")
+
+19. Write a Python program to find missing numbers in a given list of consecutive integers. 
+    li  = [1,2,4, 8,5]
+    result  = [] 
+    for a in range(1  , max(li)+1):
+        if a not in li:
+            result.append(a)
+    print(result)
+    
+    
+20. Write a program to perform element-wise addition of two lists. 
+    li1 = [1, 2, 3]
+    li2 = [4, 5, 6]
+    x = []
+    for a in range (len(li1)):
+    x.append(li1[a] + li2[a])
+    print(x)
+    
+21. Write a Python program to find the longest increasing subsequence in a list. 
+
+22. Write a program to group elements based on frequency. 
+
+""" 
 
 
+
+
+    
+    
+
+    
+
+           
+
+       
+ 
 
         
 
+        
 
         
     
-
 
 
         

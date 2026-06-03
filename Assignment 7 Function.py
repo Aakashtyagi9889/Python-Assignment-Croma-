@@ -476,9 +476,3 @@ print(map(square , li))  ==>ans is in list because it return res
 
 
 
-
-
-
-
-
-
