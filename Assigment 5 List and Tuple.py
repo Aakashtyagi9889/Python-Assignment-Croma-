@@ -211,8 +211,227 @@ ANSWER  li = [1,2,3,4, 5 ,2 ,2]
 
 22. Write a program to group elements based on frequency. 
 
+
+
+
+============================================================================================
+
+
+23. Write a Python program to create a tuple and print its elements. 
+    # t = (1,2,3,"Aakash" ,  True ,22.6)
+
+    t= tuple([1,2,3,4,4])
+    print(t)
+    
+24. Write a program to find the length of a tuple. 
+    t =  (1,2,31,2,1,3)
+    x = len(t)
+    print(x)
+    
+25. Write a program to find the maximum and minimum element in a tuple. 
+    t =  (1,2,1,5,0,3,6,2,64,46,1231)
+    print(max(t))
+    print(min(t))
+    
+26. Write a program to convert a tuple into a list. 
+    t = (1,2,3,4,5,6)
+    print(t)
+    print(type(t))
+
+    t= list(t)
+    print(t)
+    print(type(t))
+
+                                        OR
+
+    t = (1,2,3,4,5,6,7)
+    li = []
+    for a in t:
+        if a not in li:
+            li.append(a)
+    print(li)
+    print(type(li))
+    
+27. Write a program to check if an element exists in a tuple. 
+    t = (1,2,3,4,5,6,7,8)
+
+    if 8 in t:
+        print("Yes")
+    else:
+        print("no")
+        
+                            OR
+
+    t = (1,2,3,4,5,6,7,8)
+    x = 70
+    flag = False
+
+    for i in t:
+        if i == x:
+            flag = True
+            break
+
+    if flag:
+        print("Element Exist ")
+    else:
+        print("Not Exist")      
+        
+28. Write a program to count occurrences of an element in a tuple. 
+    t = (1,2,3,2,1,2,1,4)
+    x = t.count(2)
+    print(x)
+    
+                        OR
+    t = (1,2,3,2,1,2,1,4)
+    x = 4
+    count = 0
+    for i in t:
+        if i == x:
+            count+=1
+    print(count)
+
+
+29. Write a program to slice a tuple and display the result. 
+    t = (1,2,3,4,5,6,7,8,9)
+    print(t[2:8]) 
+    
+30. Write a program to find repeated elements in a tuple. 
+    t = (1,2,3,4,5,6,1,2,3,4,1)
+    originall = []
+    repeated = []
+    for i in t:
+        if i not in originall:
+            originall.append(i)
+        elif i not in repeated:
+            repeated.append(i)
+    print(repeated)
+
+
+32. Write a program to unpack elements of a tuple into variables.
+    t = ( "Aakash" , 23 , "Ghaziabad")
+    Name , Age , City = t
+    print(Name) 
+    print(Age) 
+    print(City)  
+    
+                            OR
+    t = ( "Aakash" , 23 , "Ghaziabad")
+    a =t [0]
+    b = t [1]
+    c = t [2]
+    print(a)
+    print(b)
+    print(c)
+    
+33. Write a Python program to sort a tuple.
+    t = (1,3,2,4,6,5,9,7,8)  
+    res =  tuple(sorted(t))
+    print(sorted(res))  # Ascending 
+    print(type(res))
+    print(sorted(t ,  reverse= True))   # Discending 
+    
+34. Write a program to convert a list of tuples into a dictionary.
+    li = [("a" ,  1 , 12) , ("b" , 2 ,  3), ("c" , 3,4)]
+    x =  dict(li)
+    print(x)
+    
+                OR
+                
+    li = [("a" ,  1 ) , ("b" , 2 ), ("c" , 3)]
+    d = {}
+    for k , V in li:
+        d[k]= V
+    print(d)
+                OR
+                
+    li = [("a" ,  1  , 2) , ("b" , 3 ,4 ), ("c" , 5, 6)]
+    d = {}
+    for item in li:
+        d[item[0]]= item[1:]
+    print(d)
+    
+                OR
+
+    li = [("a" ,  1  , 2) , ("b" , 3 ,4 ), ("c" , 5, 6)]
+    d = {}
+    for k , V , v2 in li:
+        d[k] = (V,v2)
+    print(d)
+    
+35. Write a program to find the index of an element in a tuple.
+    t = (21,22,23,24,25)
+    x = 23
+    res = t.index(x)
+    print(res) 
+    
+                OR
+                
+    t = (21,22,23,24,25)
+    x = 23
+    for i in range ( len(t)):
+        if t[i] == x:
+            print(i)
+            break
+            
+36. Write a program to remove an element from a tuple (without directly modifying it). 
+    t = (21,22,23,24,25)
+    x =  23
+    t2 = ()
+    for i in t :
+        if i != x:
+            t2 = t2 + (i,)
+    print(t2)
+    
+                        OR
+
+    t = (21,22,23,24,25)
+    x =  23
+    t2 = []
+    for i in t :
+        if i == x:
+            continue
+        t2.append(i)
+        # t2 = tuple(t2)                                    Gives Error 
+                                                            # 1. Lekin ab t2 list nahi hai.
+                                                            # 2. yaani tuple hai.
+                                                            # 3. Tuple ke paas append() method nahi hota.=> Isliye error:
+    t2 = tuple(t2)
+    print(t2)
+    print(type(t2))
+
+    
+37. Write a program to find common elements between two tuples.
+    t1 = (1,2,3,4,5,6)
+    t2 = (4,5,6,7,8,9)
+    res = ()            # if you need output in tuple 
+    for i in t1:
+        if i in t2:
+            print(i)    # normal ans without in Tuple
+            res = res + (i,)                
+    print(res)          # Answer in Tuple
+
+38. Write a Python program to check if a tuple is a palindrome. 
 """ 
 
+
+
+
+    
+        
+        
+
+    
+
+
+
+
+
+
+
+        
+        
+
+        
 
 
 
