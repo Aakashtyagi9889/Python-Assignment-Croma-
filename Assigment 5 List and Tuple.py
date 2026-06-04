@@ -102,7 +102,21 @@ Intermediate Level
     print(even)
     print(odd)
     
-12. Write a program to rotate a list by n positions. 
+12. Write a program to rotate a list by n positions.
+    li = [1,2,3,4,5]
+    x = 2
+    result  = li[-x:] + li[:-x]
+    print(result)
+
+                                      OR 
+    
+    li  = [1,2,3,4,5]
+    x=  2
+    for a in range(x):
+        last = li.pop()
+        li.insert(0, last)
+        print(last)
+    print(li)
 
 
 13. Write a Python program to find the second largest number in a list. 
@@ -306,6 +320,28 @@ ANSWER  li = [1,2,3,4, 5 ,2 ,2]
             repeated.append(i)
     print(repeated)
 
+31. Write a program to merge two tuples. 
+    t = (1,2,3,4)
+    t2  = (4,5,6)
+    res = ()
+    for a in t:
+        if a not in res:
+            res = res +(a,)
+    for b in t2:
+        res  = res + (b,)
+    print(res)
+    
+                                         # With Remove Duplicate value
+    t = (1,2,3,4)
+    t2  = (4,5,6)
+    res = ()
+    for a in t:
+        if a not in res:
+            res = res +(a,)
+    for b in t2:
+        if b not in res:
+            res  = res + (b,)
+    print(res)
 
 32. Write a program to unpack elements of a tuple into variables.
     t = ( "Aakash" , 23 , "Ghaziabad")
@@ -411,12 +447,37 @@ ANSWER  li = [1,2,3,4, 5 ,2 ,2]
     print(res)          # Answer in Tuple
 
 38. Write a Python program to check if a tuple is a palindrome. 
+    t = ('a' , 'k' , 'a')
+    if t == t[::-1]:
+            print("Palindrome")
+    else:
+        print("Not Palindrome")
+        
+39. Write a program to find the element with maximum frequency in a tuple. 
+    t = (1,2,1,2,2)
+    max_count = 0
+    max_element = None
+    for i in t:
+        res =t.count(i)
+        
+        if res > max_count:
+            max_count = res
+            max_element = i
+    print("Element = "  , max_element)
+    print("Frequency = " ,  max_count)
+    
+40. Write a program to create a nested tuple and access its elements. 
+    t = (1,2, (2,3) , 5,6 , (7,(8,9)))
+    print(t[5][1][1])
+
+
+
 """ 
 
 
 
 
-    
+
         
         
 
