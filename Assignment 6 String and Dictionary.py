@@ -66,7 +66,72 @@ print(upper)
 str  = "Aakash Kumar Tyagi"
 str = str.replace(" " , "_")
 print(str)
+
+
+Intermediate 
+6. Find the frequency of each character in a string.
+str = "Tyagi"
+for a in str:
+  x = str.count(a)
+  print(x) 
+
+7. Remove duplicate characters from a string. 
+str = "aakash"
+str2 = ""
+for a in str:
+  if a not in str2:
+    str2 = str2 + a
+print(str2)
+
+8. Find the first non-repeating character in a string. 
+str = "tyagi"
+str2 =""
+for a in str:
+  x = str.count(a)
+  if x == 1 :
+    str2 =  str2 +a
+    print(str2)
+    break
+    
+9. Check if two strings are anagrams. 
+s1 =  "Listen"
+s2 = "silent"
+if  sorted(s1.lower())  ==  sorted(s2.lower()):
+  print("Anagram")
+else:
+  print("Not Anagram")
+
+  or 
+
+s1 =  "Listen".lower()
+s2 = "silent".lower()
+count = 1
+for a in s1:
+  if s1.count(a) !=  s2.count(a):
+   count = 0
+   break
+if count :
+ print("Anagram")
+else:
+ print("Not")
+
+10. Convert "hello world" → "Hello World" (title case without using .title()). 
+str  = "hello World"
+result = ""
+for a in str.split():
+  result = result + a[0].upper() + a[1:] +" "
+print(result)
+
+Tricky 
+11. Find the longest word in a sentence. 
 """
+
+
+
+
+
+
+
 
 
 
