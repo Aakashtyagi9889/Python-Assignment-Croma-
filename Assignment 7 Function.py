@@ -378,7 +378,7 @@ def check(text):
   count = 0
   li = []
   for a in text.lower():
-    if text.count(a)>1:
+    if text.count(a)>=1:
       count = text.count(a)
       if a not in li:
         li = li + a + str(count)  # convert into string ==> str(count)

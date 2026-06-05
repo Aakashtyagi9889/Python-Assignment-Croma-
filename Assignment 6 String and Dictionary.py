@@ -121,10 +121,85 @@ result = ""
 for a in str.split():
   result = result + a[0].upper() + a[1:] +" "
 print(result)
-
+ ===================================================================================================================
 Tricky 
 11. Find the longest word in a sentence. 
+str = " hello My name is Aakash Tyagi "
+longest  = ""
+for word in str.split():
+  if len(word) > len(longest):
+    longest = word
+print(longest)
+
+12. Compress a string like "aaabbc" → "a3b2c1". 
+s= "aaabbc"
+li = ""
+c= 0
+for a in s:
+  if s.count(a)>=1 and (a not in li):
+    c= s.count(a)
+    li = li + a + str(c)
+print(li)
+
+13. Count words, characters, and digits in a string. 
+s = "Aakash Tyagi 783822 ".lower()
+res = 0
+res1 = 0
+res2 = 0
+for word in s.split():
+  res = res + s.count(word)
+print("Word : " , res)
+
+for ch in s:
+  if ch >="a" and ch<="z":
+    res1 = res1 + 1
+
+  elif ch >= "0" and ch<="9":
+    res2 = res2+1
+print("Ch: " , res1)
+print("Digit : " , res2)
+
+14. Rotate a string left by n positions. 
+s  = "python"
+n =  2
+str = ""
+str =  s[n:] + s[:n]
+print(str)
+
+          Or
+
+s  = "python"
+n =  2
+str = ""
+for a in range(n , len(s)):
+  str = str + s[a]
+# print(str)
+for a in range(n):
+  str  = str + s[a]
+print(str)
+
+
+15. Find all substrings of a given string. 
+s =  "abc"
+#  str = "" agar ise yaha rakhege to string empty nahi hoga  usi mai element add hote rhege 
+for k in range(len(s)):
+  str = ""    # यहाँ str फिर से empty हो गया।
+  for i in range(k , len(s)):
+    str= str + s[i]
+    print(str)
 """
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
