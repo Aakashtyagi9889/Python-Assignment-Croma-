@@ -205,7 +205,92 @@ print(s1&s2)  # intersection
 print(s1|s2)  # union
 print(s1.intersection(s2))  # intersection
 print(s1.union(s2)) # union
+
+3. Remove duplicate elements from a list using a set. 
+li = [1,2,2,3,2,1,2,4,5]
+li= list(set(li))
+print(li)
+
+4. Check if an element exists in a set. 
+s =  {1,2,3,4,5}
+x = 9
+if x in s:
+  print("Yes")
+else:
+  print("no")
+
+5. Find the difference between two sets. 
+s1=  {1,2,3,4,5}
+s2=  {1,2,6,7,8}
+print(s1.difference(s2))
+print(s1.symmetric_difference(s2))
+
+Intermediate 
+6. Find common elements in two lists using sets. 
+s1=  {1,2,3,4,5}
+s2=  {1,2,6,7,8}
+print(s1.intersection(s2))
+
+7. Check whether one set is a subset of another.
+s1 = {1,2,3,4,5}
+s2 = {1,2,3,4,5,6,7,8,9}
+print(s1.issubset(s2))
+
+loop --
+s1 = {1,2,3,4,5}
+s2 = {1,2,3,4,5,6,7,8,9}
+flag = True
+for i in s1:
+  if i not in s2:
+    flag= False
+    break
+if flag:
+  print("subset")
+else:
+  print("not")
+
+or 
+s1 = {1,2,3,4,5}
+s2 = {1,2,3,4,5,6,7,8,9}
+if s1 <= s2:
+  print("subset")
+else:
+  print("not")
+  
+8. Find symmetric difference of two sets. 
+s1 = {1,2,3,4,5,6}
+s2 = {4,5,6,7,8,9}
+print(s1.symmetric_difference(s2))
+
+9. Count unique elements in a list using a set. 
+s1 = [1,2,3,4,5,6,1,2,3]
+s1 = len(set(s1))
+print(s1)
+
+# if you want to find the unique element like 4,5,6 in list using set 
+==> s1 = [1,2,3,4,5,6,1,2,3]
+    s2 = []
+    for a in s1:
+      if s1.count(a) == 1:
+        s2.append(a)
+    s2 = set(s2)
+    print(s2)
+
+10. Remove all common elements from two sets. 
+s1 = {1,2,3,4,5,6,"aakash"}
+s2 = {4,5,6, 7,8,9, "aakash"}
+print(s1.symmetric_difference(s2))
+
+Tricky 
+11. Find missing numbers from 1 to n using sets. 
+
 """
+
+
+
+
+
+
 
 
 
