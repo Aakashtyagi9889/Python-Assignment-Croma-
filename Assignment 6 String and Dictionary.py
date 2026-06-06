@@ -335,11 +335,123 @@ for a in li:
   if li.count(a) == 1:
     res.add(a)
 print(res)
+
+====================================================================================================================
+Basic 
+1. Create a dictionary and print all keys and values. 
+d = {1:"I am", 2:"Aakash", 3:"Tyagi"}
+print(d)
+print(d.values())
+print(d.keys())
+print(d.items())
+
+2. Count frequency of each word in a sentence. 
+
+s = "hello hi hello python hi hello"
+
+d =  {}
+
+for word in s.split():
+  if word in d:
+    d[word] = d[word] + 1   # like ==> 1 + 1 = 2
+  else:
+    d[word]= d[word] + 1
+print(d)
+
+or
+
+s = "hello hi hello python hi hello"
+d = {}
+for word  in s.split():
+  if word not in d:
+    d[word] = 1
+  else:
+    d[word] = d[word]+1     # like ==> 1 + 1 = 2
+print(d)
+
+3. Merge two dictionaries. 
+d1 = {1:"Aakash" , 2:"Tyagi"}
+d2 = { 2:"Tyagi G" , 3: "783822"}
+d1.update(d2)
+print(d1)
+
+
+4. Find the length of a dictionary. 
+d = {1: " hello " , "aakash": 2, "3":"tygau"}
+print(len(d))
+
+5. Check if a key exists in a dictionary. 
+d = {1: " hello " , "aakash": 2, "3":"tygau"}
+print(d.get(3, "Not Available"))
+
+or
+d = {1: " hello " , "aakash": 2, "3":"tygau"}
+x = 1
+if d.get(x):
+  print("Available")
+else:
+  print("Not Available ")
+
+Intermediate 
+
+6. Sort a dictionary by values. 
+d = {'a': 50, 'b': 40, 'c': 30 , 'd' : 20 , 'e': 10}
+res = sorted(d , key=d.get )      # Ascending
+res = sorted(d , key=d.get , reverse=True)    # Desending
+
+for v in res:
+  print(v, d[v])
+
+
+
+7. Find the key with the maximum value. 
+d = {'a': 3, 'b': 1, 'c': 2}
+x = max(d # yaha par ye d (dictionary par sorted lagaya hai to c dega lekin key =d.get hone par values jo aygi uske basis par sort krega )      , key=d.get)    # d.get ==> means ye values lata hai or yaha par ye values k basis par comapare krega 
+print(x ,  " = " , d[x])
+
+or 
+x = max(d, key=d.get)
+print(x, d.get(x))
+
+
+8. Remove a key from a dictionary. 
+d= {1:"Aakash" ,  2 : "Kumar " ,  3:"Tyagi"}
+print(d.popitem())
+print(d)
+
+9. Convert two lists into a dictionary. 
+li1 = [1,2,3,4,5]
+li2 = ["Hello" , "my", "name" ,"is" , "Avi Tyagi"]
+res = dict(zip(li1, li2))
+print(res)
+
+
+Or 
+
+li1 = [1,2,3,4,5]
+li2 = ["Hello" , "my", "name" ,"is" , "Avi Tyagi"]
+res = {}
+for a in range(len(li1)):
+  print(a)
+  res[li1[a]] = li2[a]
+
+    # How to work ====>  {  1: "Hello" }
+print(res)
+
+10. Count character frequency using a dictionary. 
+s = "aakash"
+d = {}
+
+for ch in s:
+  if ch not in d:
+    d[ch] = 1     # ==> {'a': 1}
+  else:
+    d[ch] = d[ch] + 1
+print(d)
+
+
 """
 
-
-  
-  
 
 
 
