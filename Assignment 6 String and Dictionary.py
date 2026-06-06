@@ -187,7 +187,26 @@ for k in range(len(s)):
   for i in range(k , len(s)):
     str= str + s[i]
     print(str)
+=============================================================================================================
+Set Programming Questions 
+Basic 
+1. Create a set and add elements dynamically. 
+s = set()
+s.add(21)
+s.add(22)
+s.add(23)
+s.add(24)
+print(s)
+
+2. Find the union and intersection of two sets. 
+s1 = {1,2,3,4,5,6}
+s2 = {4,5,6,7,8,9}
+print(s1&s2)  # intersection
+print(s1|s2)  # union
+print(s1.intersection(s2))  # intersection
+print(s1.union(s2)) # union
 """
+
 
 
 
