@@ -283,8 +283,65 @@ print(s1.symmetric_difference(s2))
 
 Tricky 
 11. Find missing numbers from 1 to n using sets. 
+s = {1,2,3,5,6,8,12}
+s2 = []
+print(max(s))
+for a in range(1 , max(s)):
+  if a in s :
+    pass
+  else:
+    s2.append(a)
+print(set(s2))
 
+or 
+s = {1,2,3,5,6,8,12}
+n = 12
+s2 = set(range(1 , n+1))
+print(s2-s)
+
+12. Check if two lists have any common elements. 
+s1 = [1,2,3,4,5,6]
+s2 = [4,5,6,7,8,9]
+for a in s1:
+  if a in s2:
+    print("Common element exist :" , a)
+
+or
+s1 = [1,2,3,4,5,6]
+s2 = [4,5,6,7,8,9]
+s1 = set(s1)
+s2 = set(s2)
+print(s1.intersection(s2))
+
+
+13. Convert a set of strings into uppercase. 
+s = {"hello" , "my "," name ", "is" , "aakash tyagi"}
+for word in s:
+  print(word.upper())
+
+14. Identify unique vowels in a given string using a set. 
+str = "aakash tyagi ".lower()
+s = {"a","e", "i", "o","u"}
+s1 = set()
+for a in str:
+  if a in s:
+    s1.add(a)
+print(s1)
+
+15. Find elements that appear only once in a list. 
+li = [1,2,3,4,1,2,3,4,5,6]
+res = set()
+for a in li:
+  if li.count(a) == 1:
+    res.add(a)
+print(res)
 """
+
+
+  
+  
+
+
 
 
 
