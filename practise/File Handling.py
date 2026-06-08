@@ -22,3 +22,30 @@
 # grade = ["c" ,"b" , "a" , "d" , "e"]
 # grade = grade.sort()
 # print(grade)
+
+
+"""
+1. print number form 1 to 100
+i =  1
+count= 0
+while i<= 100:
+  print(i)
+  i = i+1
+
+2. print number form 100 to 1
+"""
+def a():
+  return 2
+
+def b():
+  return a() +3
+
+def c ():
+  res = b() + 4
+  return res*10
+
+print(c())
+
+
+
+
