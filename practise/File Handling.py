@@ -34,17 +34,17 @@ while i<= 100:
 
 2. print number form 100 to 1
 """
-def a():
-  return 2
+# def a():
+#   return 2
 
-def b():
-  return a() +3
+# def b():
+#   return a() +3
 
-def c ():
-  res = b() + 4
-  return res*10
+# def c ():
+#   res = b() + 4
+#   return res*10
 
-print(c())
+# print(c())
 
 
 
