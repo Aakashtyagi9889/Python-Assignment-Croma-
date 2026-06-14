@@ -47,5 +47,9 @@ while i<= 100:
 # print(c())
 
 
+file =  open('employee.bin' , 'wb')
+file.write("hello")
+
+
 
 
