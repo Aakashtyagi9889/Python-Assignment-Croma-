@@ -73,12 +73,78 @@
   for  i in range (1 , 11):
     print(num * i)
 
+================================================================================================================
+11-20: Control Structures (if-else, loops) 
 
+
+11. Write a Python program to check whether a number is positive, negative, or zero. 
+  num = int(input("Enter Number : ")) 
+  if  num > 0:
+    print("Number is Positive ")
+  elif num < 0:
+    print("Number is Negative")
+  else:
+    print("Zero")
+
+    
+12. Write a program to find the largest among three numbers.
+  a = float(input("Enter A Number : "))
+  b = float(input("Enter B Number : "))
+  c = float(input("Enter C Number : "))
+  if a > b and a > c:
+    print("A is greater")
+  elif a<b and b>c:
+      print("B is Greater")
+  else :
+    print("C is greater") 
+
+13. Write a Python program to print all prime numbers between 1 and 100.
+==> for i in range( 2, 101):
+    for j in range(2, i):
+      if i % j ==0 :
+        break
+    else:
+      print(i) 
+
+14. Write a Python program to calculate the factorial of a number. 
+==> num = 5
+    res = 1
+    for a in range(1,num+1):
+      print(a)
+      res = res * a
+    print(res)
+
+    OR
+
+    num  =  5
+    for a in range(1, num):
+      num = num * a
+    print(num)
+
+15. Write a Python program to print the Fibonacci sequence up to n terms.
+==> n = 10
+    a = 0
+    b = 1
+    for i in range(n):
+      print(a)
+
+      c = a+b
+      a = b
+      b = c
+
+16. Write a program to check if a year is a leap year. 
+==> year = int(input("Enter year: "))
+    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+        print("Leap Year")
+    else:
+        print("Not a Leap Year")
 """
 
 
 
- 
+
+
+
 
 
 

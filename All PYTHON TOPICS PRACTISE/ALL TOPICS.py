@@ -116,4 +116,4 @@ understanding of Python fundamentals:
 
 """
 
-print("Hello")
+print()
