@@ -363,6 +363,12 @@ Q25. Star Pattern Print:
   * * *
  * * * *
 * * * * *
+for i in range(1,6):
+    for s in range(5,i,-1):
+        print(" " , end="")
+    for k in range(1,i+1):
+        print("* " , end="")
+    print()
 
 Q26. Star Pattern Print:
 * * * * * 
@@ -376,14 +382,114 @@ for i in range(1,6):
     for j in range(6,i,-1):
         print("* ",end="")
     print()
-"""
 
+Q27. Star Pattern Print:
+1
+01
+010
+1010
+10101
+k = 1
+m = -1
 for i in range(1,6):
-    for s in range(5,i,-1):
-        print(" " , end="")
-    for k in range(1,i+1):
-        print("* " , end="")
+    for j in range(1,i+1):
+        print(k , end="")
+        k = k+m
+        m=-m 
     print()
+
+k=1
+for i in range(1,6):
+    for j in range(1, i+1):
+        print(k%2 , end= "")
+        k+=1
+    print()
+
+Q28. Star Pattern Print:
+*
+***
+*****
+*******
+*********
+for i in range(1,6):
+    for j in range(1,i*2):
+        print("*" , end= "")
+    print()
+
+
+Q28. Star Pattern Print:
+*
+***
+*****
+*******
+*********
+*******
+*****
+***
+*
+# Upper Half
+for i in range(1, 6):
+    for j in range(1, i * 2):
+        print("*", end="")
+    print()
+
+# Lower Half
+for i in range(4, 0, -1):
+    for j in range(1, i * 2):
+        print("*", end="")
+    print()
+    
+ And
+ 
+for i in range(1,6):
+    for j in range(1 , i*2):
+        print("*" , end = "")
+    print()
+    
+for l in range(1,5):
+    for m in range(9, (l*2), -1):
+        print("*" , end = "")
+    print()
+
+
+
+Q29. Star Pattern Print:
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+for i in range(1,6):
+    for k in range(4,i-1,-1):
+        print(" ", end="")
+        
+    for j in range(1,i*2):
+        print("*", end="")
+    print()
+for i in range(1,5):
+    for k in range(1,i+1):  #or  for k in range(0,i)
+        print(" ", end="")
+    for j in range(9,i*2,-1):
+        print("*", end="")
+    print()
+
+"""
+st= ""
+for i in range(1,6):
+    st = st+chr(i+64)
+    print(st)
+    
+
+
+
+
+
+    
+    
 
 
 
