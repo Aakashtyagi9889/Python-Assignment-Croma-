@@ -477,29 +477,171 @@ for i in range(1,5):
         print("*", end="")
     print()
 
+
+FOR Loop – Programming Questions 
+1. Write a program to print numbers from 1 to 100.
+for a in range(1,101):
+    print(a)
+
+2. Write a program to print all even numbers between 1 and 50. 
+for a in range(1,51):
+    if a%2==0:
+        print(a)
+
+3. Write a program to print the sum of first n natural numbers. 
+result = 0
+n = int(input("Enter Number : "))
+for a in range(1,n):
+    if a>0:
+        result = result+a
+print(result)
+
+4. Write a program to print the multiplication table of a given number.
+n= 2
+for i in range(1,11):
+    print(n*i)
+
+5. Write a program to print all elements of a list using a for loop
+li = [1,2,3,4,5,6,12,13,141,1,3,1,1]
+for i in li:
+    print(i)
+
+6. Write a program to count the number of vowels in a string.
+st = input("Enter Text  :")
+count= 0
+for i in st:
+    count+=1
+print(count)
+
+7. Write a program to find the largest number in a list.
+li = [1,2,3,4,5,6,12,13,141,1,3,1,1, 142]
+res = 0
+for i in li:
+    if i>res:
+        res = i
+print(res)
+
+9. Write a program to calculate the factorial of a number using a for loop. 
+num= 5
+res= 1
+for i in range(1,num+1):
+    res = i*res
+print(res)
+And
+num = 5
+res= 1
+for i in range(num , 0 , -1 ):
+    res = res*i
+print(res)
+
+10. Write a program to print the reverse of a string using a for loop. 
+
+st = "Aakash Tyagi"
+res = ''
+for i in st:
+    res = i+res
+print(res)
+
+11. Write a program to print numbers from 1 to 50 using a while loop.
+num = int(input("Enter Number : "))
+a =1
+while a<num:
+    print(a)
+    a= a+1
+
+12. Write a program to print all odd numbers between 1 and 50.
+a=1
+while a<50:
+    if a%2!=0:
+        print(a)
+    a+=1
+
+13. Write a program to calculate the sum of digits of a number.
+num = int(input("Enter Number : "))
+a = 1
+res = 0
+while a<num+1:
+    res = res+a
+    a= a+1
+print(res)
+
+14. Write a program to reverse a number using a while loop.
+num = 20
+a = 20
+while a>=1:
+    print(a)
+    a=a-1
+
+15. Write a program to find the factorial of a number using a while loop.
+num =int(input("Enter Number : "))
+res= 1
+a = 1
+while a<num+1:
+    res = res *a
+    a= a+1
+print(res)
+
+16. Write a program to keep taking input from the user until the user enters 0.
+a = True
+while a:
+    i = input("Enter Number : ")
+    if i=='0':
+        break
+
+17. Write a program to find the largest digit in a number.
+num = int(input("Enter a Number"))
+max = 0
+while num> 0 :
+    res = num%10
+    if max<res:
+        max =res
+    num = num//10
+print("Largest Number : " , max)
+
+18. Write a program to check whether a number is a palindrome.
+num  = int(input("Enter a Number"))
+original = num
+reverse = 0
+while num>0:
+    digit = num%10
+    reverse = reverse*10 + digit
+    num = num//10
+if  original==reverse:
+    print("Palindrome")
+
+19. Write a program to print the Fibonacci series up to n terms.
+res = int(input("Enter Number : "))
+start = 0
+a = 0
+b = 1
+while start<=res:
+    print(a)
+    c = a + b
+    a=b
+    b=c
+    start = start+1
+    print(c)
+
+20. Write a program to implement a number guessing game using a while loop.
+print("\n\t\t\tWelcome To Number Guessing Game!")
+res = 21
+while True:
+    ch= input("\nPress 1 For Playing game and 0 for exit : ")
+    if ch=="1":
+        num = int(input("Enter Your Number : "))
+        if num==res:
+            print("Congrats! You Have Won The Game")
+            break
+    elif ch == "0":
+        print("You Have Exited Suceesfully !")
+        break
 """
-st= ""
-for i in range(1,6):
-    st = st+chr(i+64)
-    print(st)
-    
-
-
-
-
-
-    
-    
-
 
 
         
 
 
-    
-    
 
-    
 
 
 
