@@ -635,8 +635,72 @@ while True:
     elif ch == "0":
         print("You Have Exited Suceesfully !")
         break
-"""
 
+21. Write a program to print a number pattern using loops.
+for i in range(1,6):
+    j=1
+    while j<=i:
+        print(j , end = "" )
+        j +=1
+    print()
+
+22. Write a program to count the frequency of each character in a string.
+st =  "aakash"
+res = ""
+for i in st:
+    if st.count(i)>0:
+        if i not in res:
+            res = res + i
+            print(i, ":", st.count(i))
+
+23. Write a program to print all Armstrong numbers between 1 and 1000.
+num = input("Enter Number : ")
+digit = len(str(num))
+total = 0
+for i in str(num):
+    total = total + int(i)**digit
+if total == num:
+    print(num, "is an Armstrong number")
+else:
+    print(num, "is not an Armstrong number")
+    
+Or
+
+
+num = int(input("Enter Number to check Armstrong : "))
+temp = num
+total  = 0
+digit = len(str(num))
+
+while temp>0:
+    digit = temp%10
+    total = total + digit **3
+    temp = temp//10
+
+if total == num:
+    print(num, "is an Armstrong number")
+else:
+    print(num, "is not an Armstrong number")
+
+24. Write a program to simulate an ATM menu using a while loop.
+
+"""
+print("\n\t\t\t\t Welcome to ATM Machine!")
+while True:
+    print("1. to check balance")
+    ch = int(input("Enter Your Choice"))
+    if ch == 1:
+        
+
+    
+
+    
+
+    
+
+
+
+    
 
         
 
