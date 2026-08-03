@@ -684,13 +684,14 @@ else:
 
 24. Write a program to simulate an ATM menu using a while loop.
 
-"""
 print("\n\t\t\t\t Welcome to ATM Machine!")
 while True:
     print("1. to check balance")
     ch = int(input("Enter Your Choice"))
     if ch == 1:
         
+"""
+
 
     
 
